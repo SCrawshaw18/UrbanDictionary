@@ -9,7 +9,7 @@ with open('urban.csv') as csvfile:
         if len(row)==6:
             count+=1
             if count % 10000 == 0:
-                print(str(count) + "/" + len(readCSV))
+                print(str(count) + "/ almost 2.6 million")
             description = row[5]
             if description.find(";") != -1:
                 description = description[:description.find(";")]
