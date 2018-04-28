@@ -1,8 +1,4 @@
 
-
-import pandas as pd       
-from bs4 import BeautifulSoup
-import numpy as np
 import csv
 
 words = []
