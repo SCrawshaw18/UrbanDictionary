@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[11]:
+# In[12]:
 
 
 import csv
@@ -10,12 +10,12 @@ words = []
 
 bads=open("en.txt","r")
 listbads=bads.read().split("\n")
-print(listbads)
 with open('urban.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     count=0
     for row in readCSV:
         if len(row)==6:
+            count+=1
             if count % 10000 == 0:
                 print(str(count))
             description = row[5]
