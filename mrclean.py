@@ -4,7 +4,11 @@ import csv
 words = []
 with open('urban.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
+    count=0
     for row in readCSV:
+        count+=1
+        if count % 10000 == 0:
+            print(count + "/" + len(readCSV))
         description = row[5]
         if description.find(";") != -1:
             description = description[:description.find(";")]
