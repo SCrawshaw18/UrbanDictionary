@@ -22,7 +22,7 @@ with open('urban.csv') as csvfile:
             
             term=row[1].lower()
             
-            if len(description)>2 and term.find("/")==-1:
+            if len(description)>2 and term.find("/")==-1 and count % 25 == 0:
                 words.append("%s: %s \n"%(term,description))
 
 file=open("input.txt","w")
